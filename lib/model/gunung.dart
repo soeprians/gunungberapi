@@ -1,5 +1,5 @@
-class Food {
-  Food({
+class Gunung {
+  Gunung({
     required this.id,
     required this.image,
     required this.name,
@@ -19,7 +19,7 @@ class Food {
   String cookingTime;
   String description;
 
-  factory Food.fromJson(Map<String, dynamic> json) => Food(
+  factory Gunung.fromJson(Map<String, dynamic> json) => Gunung(
         id: json["id"],
         image: json["image"],
         name: json["name"],
@@ -42,8 +42,8 @@ class Food {
       };
 }
 
-final dummyFoods = [
-  Food(
+final dummyGunungs = [
+  Gunung(
     id: '1',
     image: 'asset/burger.jpeg',
     name: 'Burger Cheese',
@@ -54,7 +54,7 @@ final dummyFoods = [
     description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
   ),
-  Food(
+  Gunung(
     id: '2',
     image: 'asset/pizza.jpeg',
     name: 'Pizza Hots',
@@ -65,7 +65,7 @@ final dummyFoods = [
     description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
   ),
-  Food(
+  Gunung(
     id: '3',
     image: 'asset/salad.webp',
     name: 'Salad Health',
@@ -76,7 +76,7 @@ final dummyFoods = [
     description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
   ),
-  Food(
+  Gunung(
     id: '4',
     image: 'asset/salmon.jpeg',
     name: 'Salmon Fresh Mounth',

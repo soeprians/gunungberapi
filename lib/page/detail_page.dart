@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import '../model/gunung.dart';
 
 class DetailPage extends StatefulWidget {
-  const DetailPage({Key? key, required this.food}) : super(key: key);
-  final Food food;
+  const DetailPage({Key? key, required this.gunung}) : super(key: key);
+  final Gunung gunung;
 
   @override
   State<DetailPage> createState() => _DetailPageState();
@@ -42,14 +42,14 @@ class _DetailPageState extends State<DetailPage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      widget.food.name,
+                      widget.gunung.name,
                       style: const TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.black,
                         fontSize: 34,
                       ),
                     ),
-                    Text('\$${widget.food.price}',
+                    Text('\$${widget.gunung.price}',
                         style: const TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.bold,
@@ -98,7 +98,7 @@ class _DetailPageState extends State<DetailPage> {
               const Icon(Icons.star, color: Colors.amber),
               const SizedBox(width: 4),
               Text(
-                widget.food.rate.toString(),
+                widget.gunung.rate.toString(),
                 style: const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
@@ -108,7 +108,7 @@ class _DetailPageState extends State<DetailPage> {
               const Icon(Icons.fiber_manual_record, color: Colors.red),
               const SizedBox(width: 4),
               Text(
-                '${widget.food.kcal} kcal',
+                '${widget.gunung.kcal} kcal',
                 style: const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
@@ -118,7 +118,7 @@ class _DetailPageState extends State<DetailPage> {
               const Icon(Icons.access_time_filled, color: Colors.amber),
               const SizedBox(width: 4),
               Text(
-                widget.food.cookingTime,
+                widget.gunung.cookingTime,
                 style: const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
@@ -128,14 +128,14 @@ class _DetailPageState extends State<DetailPage> {
           ),
           const SizedBox(height: 30),
           Text(
-            'About Food',
+            'About Gunung',
             style: Theme.of(context).textTheme.titleLarge!.copyWith(
                   fontWeight: FontWeight.bold,
                 ),
           ),
           const SizedBox(height: 16),
           Text(
-            widget.food.description,
+            widget.gunung.description,
             style: const TextStyle(
               fontSize: 16,
               color: Colors.black54,
@@ -206,7 +206,7 @@ class _DetailPageState extends State<DetailPage> {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(250),
                 child: Image.asset(
-                  widget.food.image,
+                  widget.gunung.image,
                   fit: BoxFit.cover,
                   width: 250,
                   height: 250,
@@ -231,7 +231,7 @@ class _DetailPageState extends State<DetailPage> {
           ),
           const Spacer(),
           Text(
-            'Details Food',
+            'Details gunung',
             style: Theme.of(context).textTheme.headline6!.copyWith(
                   color: Colors.white,
                 ),

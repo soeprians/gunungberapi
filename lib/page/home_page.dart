@@ -2,7 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:gunungberapi/model/gunung.dart';
-import 'package:uispeed_grocery_shop/page/detail_page.dart';
+import 'package:gunungberapi/page/detail_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -45,7 +45,7 @@ class _HomePageState extends State<HomePage> {
           const SizedBox(height: 30),
           categories(),
           const SizedBox(height: 20),
-          gridFood(),
+          gridGunung(),
         ],
       ),
     );
@@ -95,7 +95,7 @@ class _HomePageState extends State<HomePage> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: const [
           Text(
-            'Hi Indra',
+            'Hi Pencari Ilmu',
             style: TextStyle(
               color: Colors.green,
               fontWeight: FontWeight.w500,
@@ -103,7 +103,7 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           Text(
-            'Find your food',
+            'Find your Gunung',
             style: TextStyle(
               color: Colors.black,
               fontWeight: FontWeight.bold,
@@ -191,9 +191,9 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  Widget gridFood() {
+  Widget gridGunung() {
     return GridView.builder(
-      itemCount: dummyFoods.length,
+      itemCount: dummyGunungs.length,
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
       padding: const EdgeInsets.all(16),
@@ -204,11 +204,11 @@ class _HomePageState extends State<HomePage> {
         mainAxisExtent: 261,
       ),
       itemBuilder: (context, index) {
-        Food food = dummyFoods[index];
+        Gunung gunung = dummyGunungs[index];
         return GestureDetector(
           onTap: () {
             Navigator.push(context, MaterialPageRoute(builder: (context) {
-              return DetailPage(food: food);
+              return DetailPage(gunung: gunung);
             }));
           },
           child: Container(
@@ -227,7 +227,7 @@ class _HomePageState extends State<HomePage> {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(120),
                         child: Image.asset(
-                          food.image,
+                          gunung.image,
                           width: 120,
                           height: 120,
                           fit: BoxFit.cover,
@@ -238,7 +238,7 @@ class _HomePageState extends State<HomePage> {
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 16),
                       child: Text(
-                        food.name,
+                        gunung.name,
                         style: Theme.of(context).textTheme.headline6,
                         textAlign: TextAlign.center,
                         maxLines: 1,
@@ -251,14 +251,14 @@ class _HomePageState extends State<HomePage> {
                       child: Row(
                         children: [
                           Text(
-                            food.cookingTime,
+                            gunung.cookingTime,
                             style: TextStyle(color: Colors.grey[600]),
                           ),
                           const Spacer(),
                           const Icon(Icons.star, color: Colors.amber, size: 18),
                           const SizedBox(width: 4),
                           Text(
-                            food.rate.toString(),
+                            gunung.rate.toString(),
                             style: TextStyle(color: Colors.grey[600]),
                           ),
                         ],
@@ -267,7 +267,7 @@ class _HomePageState extends State<HomePage> {
                     Padding(
                       padding: const EdgeInsets.all(16),
                       child: Text(
-                        '\$${food.price}',
+                        '\$${gunung.price}',
                         style: const TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
