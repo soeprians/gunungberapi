@@ -42,51 +42,19 @@ class _DetailPageState extends State<DetailPage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      widget.gunung.name,
+                      widget.gunung.nama,
                       style: const TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.black,
                         fontSize: 34,
                       ),
                     ),
-                    Text('\$${widget.gunung.price}',
+                    Text('${widget.gunung.bentuk}',
                         style: const TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.bold,
                           color: Colors.green,
                         )),
-                  ],
-                ),
-              ),
-              Material(
-                color: Colors.green,
-                borderRadius: BorderRadius.circular(30),
-                child: Row(
-                  children: [
-                    IconButton(
-                      onPressed: () {
-                        if (quantity > 1) {
-                          quantity -= 1;
-                          setState(() {});
-                        }
-                      },
-                      icon: const Icon(Icons.remove, color: Colors.white),
-                    ),
-                    const SizedBox(width: 4),
-                    Text(
-                      '$quantity',
-                      style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                            color: Colors.white,
-                          ),
-                    ),
-                    const SizedBox(width: 4),
-                    IconButton(
-                      onPressed: () {
-                        quantity += 1;
-                        setState(() {});
-                      },
-                      icon: const Icon(Icons.add, color: Colors.white),
-                    ),
                   ],
                 ),
               ),
@@ -98,7 +66,7 @@ class _DetailPageState extends State<DetailPage> {
               const Icon(Icons.star, color: Colors.amber),
               const SizedBox(width: 4),
               Text(
-                widget.gunung.rate.toString(),
+                widget.gunung.tinggi_meter.toString(),
                 style: const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
@@ -108,7 +76,7 @@ class _DetailPageState extends State<DetailPage> {
               const Icon(Icons.fiber_manual_record, color: Colors.red),
               const SizedBox(width: 4),
               Text(
-                '${widget.gunung.kcal} kcal',
+                '${widget.gunung.estimasi_letusan_terakhir}',
                 style: const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
@@ -118,7 +86,7 @@ class _DetailPageState extends State<DetailPage> {
               const Icon(Icons.access_time_filled, color: Colors.amber),
               const SizedBox(width: 4),
               Text(
-                widget.gunung.cookingTime,
+                widget.gunung.geolokasi,
                 style: const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
@@ -154,7 +122,7 @@ class _DetailPageState extends State<DetailPage> {
                   vertical: 20,
                 ),
                 child: const Text(
-                  'Add to Cart',
+                  'Add to Save',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 18,

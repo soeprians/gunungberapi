@@ -25,11 +25,8 @@ class _HomePageState extends State<HomePage> {
         unselectedItemColor: Colors.green[200],
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.chat), label: 'Chat'),
           BottomNavigationBarItem(
               icon: Icon(Icons.shopping_cart), label: 'Cart'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.notifications), label: 'Notification'),
           BottomNavigationBarItem(
               icon: Icon(Icons.favorite), label: 'Favorite'),
         ],
@@ -72,7 +69,7 @@ class _HomePageState extends State<HomePage> {
           ),
           const Spacer(),
           const Icon(Icons.location_on, color: Colors.green, size: 18),
-          const Text('Garut, Indonesia'),
+          const Text('Indonesia'),
           const Spacer(),
           ClipRRect(
             borderRadius: BorderRadius.circular(8),
@@ -95,7 +92,7 @@ class _HomePageState extends State<HomePage> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: const [
           Text(
-            'Hi Pencari Ilmu',
+            'Selamat Datang',
             style: TextStyle(
               color: Colors.green,
               fontWeight: FontWeight.w500,
@@ -103,7 +100,7 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           Text(
-            'Find your Gunung',
+            'Pengguna Aplikasi',
             style: TextStyle(
               color: Colors.black,
               fontWeight: FontWeight.bold,
@@ -131,7 +128,7 @@ class _HomePageState extends State<HomePage> {
               decoration: InputDecoration(
                 border: InputBorder.none,
                 prefixIcon: const Icon(Icons.search, color: Colors.green),
-                hintText: 'Search food',
+                hintText: 'Search Gunung',
                 hintStyle: TextStyle(color: Colors.grey[600]),
               ),
             ),
@@ -156,7 +153,13 @@ class _HomePageState extends State<HomePage> {
   }
 
   Widget categories() {
-    List list = ['Food', 'Fruits', 'Vegetables', 'Grocery', 'Drink'];
+    List list = [
+      'bawah laut',
+      'stratovulkan',
+      'kaldera',
+      'kerucut',
+      'kompleks'
+    ];
     return SizedBox(
       height: 40,
       child: ListView.builder(
@@ -238,7 +241,7 @@ class _HomePageState extends State<HomePage> {
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 16),
                       child: Text(
-                        gunung.name,
+                        gunung.nama,
                         style: Theme.of(context).textTheme.headline6,
                         textAlign: TextAlign.center,
                         maxLines: 1,
@@ -251,14 +254,14 @@ class _HomePageState extends State<HomePage> {
                       child: Row(
                         children: [
                           Text(
-                            gunung.cookingTime,
+                            gunung.geolokasi,
                             style: TextStyle(color: Colors.grey[600]),
                           ),
                           const Spacer(),
                           const Icon(Icons.star, color: Colors.amber, size: 18),
                           const SizedBox(width: 4),
                           Text(
-                            gunung.rate.toString(),
+                            gunung.tinggi_meter.toString(),
                             style: TextStyle(color: Colors.grey[600]),
                           ),
                         ],
@@ -267,7 +270,7 @@ class _HomePageState extends State<HomePage> {
                     Padding(
                       padding: const EdgeInsets.all(16),
                       child: Text(
-                        '\$${gunung.price}',
+                        '${gunung.bentuk}',
                         style: const TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
