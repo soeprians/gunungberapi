@@ -145,6 +145,17 @@ final dummyGunungs = [
     estimasi_letusan_terakhir: '2 Agustus 2019',
     geolokasi: '6.77°S 107.60°E',
     description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        'Gunung Tangkuban Parahu adalah salah satu gunung yang terletak di Provinsi Jawa Barat, Indonesia. Sekitar 20 km ke arah utara Kota Bandung, dengan rimbun pohon pinus dan hamparan kebun teh di sekitarnya, Gunung Tangkuban Parahu mempunyai ketinggian setinggi 2.084 meter..',
+  ),
+  Gunung(
+    id: '1',
+    image: 'asset/tangkubanperahu.jpeg',
+    nama: 'Merapi',
+    bentuk: 'kerucut',
+    tinggi_meter: '2968 meter',
+    estimasi_letusan_terakhir: 'Terakhir Erupsi 2021',
+    geolokasi: '7.542°S 110.442°E',
+    description:
+        'Gunung berapi di bagian tengah Pulau Jawa dan merupakan salah satu gunung api teraktif di Indonesia. Lereng sisi selatan berada dalam administrasi Kabupaten Sleman, Daerah Istimewa Yogyakarta, dan sisanya berada dalam wilayah Provinsi Jawa Tengah, yaitu Kabupaten Magelang di sisi barat, Kabupaten Boyolali di sisi utara dan timur, serta Kabupaten Klaten di sisi tenggara.',
   ),
 ];

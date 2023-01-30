@@ -25,8 +25,7 @@ class _HomePageState extends State<HomePage> {
         unselectedItemColor: Colors.green[200],
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.shopping_cart), label: 'Cart'),
+          BottomNavigationBarItem(icon: Icon(Icons.save), label: 'Save'),
           BottomNavigationBarItem(
               icon: Icon(Icons.favorite), label: 'Favorite'),
         ],
@@ -74,7 +73,7 @@ class _HomePageState extends State<HomePage> {
           ClipRRect(
             borderRadius: BorderRadius.circular(8),
             child: Image.asset(
-              'asset/salad.webp',
+              'asset/indonesia.webp',
               fit: BoxFit.cover,
               width: 40,
               height: 40,
@@ -153,13 +152,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   Widget categories() {
-    List list = [
-      'bawah laut',
-      'stratovulkan',
-      'kaldera',
-      'kerucut',
-      'kompleks'
-    ];
+    List list = ['semua', 'stratovulkan', 'kaldera', 'kerucut', 'kompleks'];
     return SizedBox(
       height: 40,
       child: ListView.builder(
